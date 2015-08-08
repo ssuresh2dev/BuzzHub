@@ -8,11 +8,13 @@
 
 import Socket_IO_Client_Swift
 import UIKit
+import AVFoundation
 
 class GameTrackerViewController: UIViewController {
     @IBOutlet var buzzLabel: UILabel?
     let socket = SocketIOClient(socketURL: "http://45.55.138.232:8900")
     var gameKey = ""
+    var audioPlayer = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,8 @@ class GameTrackerViewController: UIViewController {
             {
                 if key == self!.gameKey {
                     self!.buzzLabel?.text = name + " Buzzed!"
+                    self!.playSound()
+                    
                 }
                 
             }
@@ -46,6 +50,19 @@ class GameTrackerViewController: UIViewController {
     @IBAction func endGamePressed(){
         self.socket.emit("end game", gameKey)
         self.navigationController?.popToRootViewControllerAnimated(true)
+        
+        
+    }
+    
+    func playSound(){
+        var alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("buzz", ofType: "mp3")!)
+        AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil)
+        AVAudioSession.sharedInstance().setActive(true, error: nil)
+        
+        var error: NSError?
+        audioPlayer = AVAudioPlayer(contentsOfURL: alertSound, error: &error)
+        audioPlayer.prepareToPlay()
+        audioPlayer.play()
         
     }
 

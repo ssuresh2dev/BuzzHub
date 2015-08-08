@@ -16,12 +16,14 @@ class BuzzerViewController: UIViewController {
     var keyString = ""
     @IBOutlet var nameLabel: UILabel?
     @IBOutlet var buzzButton: UIButton?
+    @IBOutlet var lockoutText: UILabel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.socket.connect()
         self.nameLabel?.text = playerName
         self.addHandlers()
+        self.lockoutText?.text = ""
         // Do any additional setup after loading the view.
     }
 
@@ -32,6 +34,9 @@ class BuzzerViewController: UIViewController {
     
     @IBAction func buzzPressed(){
         self.socket.emit("buzz", playerName, keyString)
+        self.lockoutText?.text = "You have buzzed!"
+        self.view.backgroundColor = UIColor.greenColor()
+        
         
     }
 
@@ -41,6 +46,10 @@ class BuzzerViewController: UIViewController {
             {
                 if key == self!.keyString {
                     self!.buzzButton?.enabled = false
+                    self!.lockoutText?.text = "You cannot buzz right now."
+                }
+                if name == self!.playerName {
+                    self!.lockoutText?.text = "You have buzzed!"
                 }
             }
 
@@ -51,6 +60,8 @@ class BuzzerViewController: UIViewController {
                 if key == self!.keyString {
 
                 self!.buzzButton?.enabled = true
+                    self!.lockoutText?.text = ""
+                    self!.view.backgroundColor = UIColor.whiteColor()
                     
                 }
             }

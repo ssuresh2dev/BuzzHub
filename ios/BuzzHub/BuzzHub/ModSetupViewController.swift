@@ -8,12 +8,15 @@
 
 import UIKit
 import Socket_IO_Client_Swift
+import AVFoundation
 
 class ModSetupViewController: UIViewController, UITableViewDataSource {
     let socket = SocketIOClient(socketURL: "http://45.55.138.232:8900")
     
     var playersArray = [String]()
     var gameKeyString = ""
+    
+    
     
     @IBOutlet var keyText: UILabel?
     @IBOutlet var namesTable: UITableView?
@@ -65,9 +68,11 @@ class ModSetupViewController: UIViewController, UITableViewDataSource {
         gameTrackerViewController.gameKey = self.gameKeyString
     }
     
+
+    
     func randomStringWithLength () -> NSString {
         
-        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let letters : NSString = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNOPQRSTUVWXYZ0123456789"
         
         var randomString : NSMutableString = NSMutableString(capacity: 8)
         

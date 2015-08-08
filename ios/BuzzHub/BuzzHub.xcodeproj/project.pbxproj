@@ -17,6 +17,7 @@
 		3C835E0B1B75D2DB008F06C1 /* GameTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C835E0A1B75D2DB008F06C1 /* GameTrackerViewController.swift */; };
 		3C835E0D1B75D38E008F06C1 /* PlayerSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C835E0C1B75D38E008F06C1 /* PlayerSetupViewController.swift */; };
 		3C835E0F1B75D4A1008F06C1 /* BuzzerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C835E0E1B75D4A1008F06C1 /* BuzzerViewController.swift */; };
+		3C835E111B7655EF008F06C1 /* buzz.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3C835E101B7655EF008F06C1 /* buzz.mp3 */; };
 		F884B75F525151DFFD92F8D8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9861D16DE0B37D3F04CECCE /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		3C835E0A1B75D2DB008F06C1 /* GameTrackerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameTrackerViewController.swift; sourceTree = "<group>"; };
 		3C835E0C1B75D38E008F06C1 /* PlayerSetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerSetupViewController.swift; sourceTree = "<group>"; };
 		3C835E0E1B75D4A1008F06C1 /* BuzzerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuzzerViewController.swift; sourceTree = "<group>"; };
+		3C835E101B7655EF008F06C1 /* buzz.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = buzz.mp3; sourceTree = "<group>"; };
 		8943AE318D00E80E8B69327A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B9861D16DE0B37D3F04CECCE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -118,6 +120,7 @@
 		3C835D741B758595008F06C1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3C835E101B7655EF008F06C1 /* buzz.mp3 */,
 				3C835D751B758595008F06C1 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C835D7C1B758595008F06C1 /* Main.storyboard in Resources */,
+				3C835E111B7655EF008F06C1 /* buzz.mp3 in Resources */,
 				3C835D811B758595008F06C1 /* LaunchScreen.xib in Resources */,
 				3C835D7E1B758595008F06C1 /* Images.xcassets in Resources */,
 			);

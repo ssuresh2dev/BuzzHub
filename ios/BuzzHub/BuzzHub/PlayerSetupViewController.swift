@@ -14,13 +14,17 @@ class PlayerSetupViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var nameTextField: UITextField?
     @IBOutlet var enterGameButton: UIButton?
     @IBOutlet var submitButton: UIButton?
+    @IBOutlet var waitingLabel: UILabel?
+    
     let socket = SocketIOClient(socketURL: "http://45.55.138.232:8900")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.enterGameButton?.enabled = false
+        self.enterGameButton?.hidden = true
         self.socket.connect()
         self.addHandlers()
+        self.waitingLabel?.text = ""
         // Do any additional setup after loading the view.
     }
 
@@ -35,6 +39,9 @@ class PlayerSetupViewController: UIViewController, UITextFieldDelegate {
         var nameString = self.nameTextField!.text
         self.socket.emit("joinGroup", keyString, nameString)
         self.submitButton?.enabled = false
+        self.submitButton?.hidden = true
+        self.waitingLabel?.text = "Waiting for Moderator..."
+        
         
         
     }
@@ -42,6 +49,8 @@ class PlayerSetupViewController: UIViewController, UITextFieldDelegate {
     func addHandlers(){
         self.socket.on("moveToBuzz"){data, ack in
             self.enterGameButton?.enabled = true
+            self.enterGameButton?.hidden = false
+            self.waitingLabel?.text = ""
         }
         
     }

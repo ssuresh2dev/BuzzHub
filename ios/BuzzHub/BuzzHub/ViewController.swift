@@ -11,7 +11,6 @@ import Socket_IO_Client_Swift
 
 
 class ViewController: UIViewController {
-
     //let socket = SocketIOClient(socketURL: "localhost:8900")
 
     @IBAction func playAsModeratorPressed() {
