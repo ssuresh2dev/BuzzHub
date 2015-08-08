@@ -34,11 +34,15 @@ class ModSetupViewController: UIViewController, UITableViewDataSource {
     
     func addHandlers(){
         self.socket.on("addNew"){data, ack in
-            
-            var newPlayerName = data?[1] as? String
-            self.playersArray.append(newPlayerName!)
-            self.namesTable?.reloadData()
-            
+            if let name = data?[1] as? String, let key = data?[0] as? String
+            {
+                if key == self.gameKeyString {
+
+                    var newPlayerName = name
+                    self.playersArray.append(newPlayerName)
+                    self.namesTable?.reloadData()
+                }
+            }
             
         }
         

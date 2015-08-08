@@ -37,23 +37,32 @@ class BuzzerViewController: UIViewController {
 
     func addHandlers(){
         self.socket.on("playerBuzzed"){[weak self]data, ack in
-            println(data)
             if let name = data?[0] as? String, let key = data?[1] as? String
             {
                 if key == self!.keyString {
                     self!.buzzButton?.enabled = false
                 }
             }
-//            let s = data[0] as! String
-           // if("s" == self.keyString){
-            
-           // }
-        }
-        self.socket.on("buzzerReset"){data, ack in
-            //if(data[0] as! String == keyString){
-                self.buzzButton?.enabled = true
-            //}
 
+        }
+        self.socket.on("buzzerReset"){[weak self]data, ack in
+            if let key = data?[0] as? String
+            {
+                if key == self!.keyString {
+
+                self!.buzzButton?.enabled = true
+                    
+                }
+            }
+
+        }
+        self.socket.on("game over"){[weak self]data, ack in
+            if let key = data?[0] as? String
+            {
+                if key == self!.keyString {
+                    self!.navigationController?.popToRootViewControllerAnimated(true)
+                }
+            }
         }
         
         

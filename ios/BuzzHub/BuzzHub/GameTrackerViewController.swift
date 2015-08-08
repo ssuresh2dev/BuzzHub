@@ -27,16 +27,25 @@ class GameTrackerViewController: UIViewController {
     }
     
     func addHandlers(){
-        self.socket.on("playerBuzzed"){data, ack in
-            self.buzzLabel?.text = "A player buzzed!"
+        self.socket.on("playerBuzzed"){[weak self]data, ack in
+            if let name = data?[0] as? String, let key = data?[1] as? String
+            {
+                if key == self!.gameKey {
+                    self!.buzzLabel?.text = name + " Buzzed!"
+                }
+                
+            }
             
         }
     }
     @IBAction func resetBuzzerPressed(){
+        self.socket.emit("resetBuzzers", gameKey)
         
     }
     
     @IBAction func endGamePressed(){
+        self.socket.emit("end game", gameKey)
+        self.navigationController?.popToRootViewControllerAnimated(true)
         
     }
 
