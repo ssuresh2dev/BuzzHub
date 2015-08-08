@@ -9,7 +9,7 @@
 import Socket_IO_Client_Swift
 import UIKit
 
-class PlayerSetupViewController: UIViewController {
+class PlayerSetupViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var keyTextField: UITextField?
     @IBOutlet var nameTextField: UITextField?
     @IBOutlet var enterGameButton: UIButton?
@@ -54,6 +54,11 @@ class PlayerSetupViewController: UIViewController {
         let buzzerViewController = segue.destinationViewController as! BuzzerViewController
         buzzerViewController.playerName = self.nameTextField!.text
         buzzerViewController.keyString = self.keyTextField!.text
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return false
     }
 
     /*
