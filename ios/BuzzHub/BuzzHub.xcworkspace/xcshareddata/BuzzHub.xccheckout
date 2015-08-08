@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>DFF50B1D-4F4C-46BC-818A-EDEC2B5DFF48</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BuzzHub</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EE5D2F87CF6AADB24383E51456A3BAACF1DEE0D3</key>
+		<string>https://github.com/ssuresh2dev/BuzzHub.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ios/BuzzHub/BuzzHub.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EE5D2F87CF6AADB24383E51456A3BAACF1DEE0D3</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ssuresh2dev/BuzzHub.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EE5D2F87CF6AADB24383E51456A3BAACF1DEE0D3</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EE5D2F87CF6AADB24383E51456A3BAACF1DEE0D3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BuzzHub</string>
+		</dict>
+	</array>
+</dict>
+</plist>
