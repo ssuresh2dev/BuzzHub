@@ -28,9 +28,7 @@ class GameTrackerViewController: UIViewController {
     
     func addHandlers(){
         self.socket.on("playerBuzzed"){data, ack in
-//            var gameKeyCompare = data[1]
-//            var playerName = data[0]
-            
+            self.buzzLabel?.text = "A player buzzed!"
             
         }
     }

@@ -38,10 +38,16 @@ class BuzzerViewController: UIViewController {
     func addHandlers(){
         self.socket.on("playerBuzzed"){data, ack in
             println(data)
-//            let s = data[0] as! String
-            if("s" == self.keyString){
-                self.buzzButton?.enabled = false
+            if let name = data?[0] as? String, let key = data?[1] as? String
+            {
+                if key == self.keyString{
+                    self.buzzButton?.enabled = false
+                }
             }
+//            let s = data[0] as! String
+           // if("s" == self.keyString){
+            
+           // }
         }
         self.socket.on("buzzerReset"){data, ack in
             //if(data[0] as! String == keyString){

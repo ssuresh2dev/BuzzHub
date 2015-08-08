@@ -231,7 +231,7 @@
         <!--Game Tracker View Controller-->
         <scene sceneID="dda-TC-hrO">
             <objects>
-                <viewController id="Ktp-e3-hVE" customClass="GameTrackerViewController" sceneMemberID="viewController">
+                <viewController id="Ktp-e3-hVE" customClass="GameTrackerViewController" customModule="BuzzHub" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wXL-sd-mJ8"/>
                         <viewControllerLayoutGuide type="bottom" id="gQi-sG-Io9"/>
@@ -272,6 +272,9 @@
                             <constraint firstAttribute="centerX" secondItem="VVg-ez-tg3" secondAttribute="centerX" id="PZA-Ov-ctR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buzzLabel" destination="VVg-ez-tg3" id="LLW-2g-1FN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pYo-eb-Dc7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
