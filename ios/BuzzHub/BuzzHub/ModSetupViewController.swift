@@ -51,7 +51,7 @@ class ModSetupViewController: UIViewController, UITableViewDataSource {
     
     @IBAction func startGamePressed(){
         //self.navigationController?.pushViewController(GameTrackerViewController(), animated: true)
-        self.socket.emit("startGame", self.keyText!.text!)
+        self.socket.emit("startGame", gameKeyString)
         self.performSegueWithIdentifier("pushToGameTracker", sender: self)
         
     }
