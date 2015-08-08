@@ -3,9 +3,9 @@ var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
 io.on('connection', function(socket){
-  socket.on('buzz', function(msg){
-  	console.log(msg + " buzzed")
-    io.emit('playerBuzzed', msg)
+  socket.on('buzz', function(playerName, keyName){
+  	console.log(playerName + " buzzed")
+    io.emit('playerBuzzed', playerName, keyName)
 
   });
   socket.on('keyGenerate', function(keyName){
@@ -21,8 +21,11 @@ io.on('connection', function(socket){
   socket.on('resetBuzzers', function(msg){
   	io.emit("buzzerReset", msg)
   });
-});
+});	
 
+app.get('/', function(req, res){
+  res.send('<h1>Hello world</h1>');
+});
 
 http.listen(8900, function(){
   console.log('listening on *:8900');

@@ -14,7 +14,7 @@ class PlayerSetupViewController: UIViewController {
     @IBOutlet var nameTextField: UITextField?
     @IBOutlet var enterGameButton: UIButton?
     @IBOutlet var submitButton: UIButton?
-    let socket = SocketIOClient(socketURL: "localhost:8900")
+    let socket = SocketIOClient(socketURL: "http://45.55.138.232:8900")
     
     override func viewDidLoad() {
         super.viewDidLoad()

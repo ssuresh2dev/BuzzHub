@@ -10,7 +10,7 @@ import UIKit
 import Socket_IO_Client_Swift
 
 class ModSetupViewController: UIViewController, UITableViewDataSource {
-    let socket = SocketIOClient(socketURL: "localhost:8900")
+    let socket = SocketIOClient(socketURL: "http://45.55.138.232:8900")
     
     var playersArray = [String]()
     var gameKeyString = ""

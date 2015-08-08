@@ -11,7 +11,7 @@ import UIKit
 
 class GameTrackerViewController: UIViewController {
     @IBOutlet var buzzLabel: UILabel?
-    let socket = SocketIOClient(socketURL: "localhost:8900")
+    let socket = SocketIOClient(socketURL: "http://45.55.138.232:8900")
     var gameKey = ""
     
     override func viewDidLoad() {

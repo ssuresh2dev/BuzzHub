@@ -13,7 +13,6 @@ import Socket_IO_Client_Swift
 class ViewController: UIViewController {
 
     //let socket = SocketIOClient(socketURL: "localhost:8900")
-    let playerName = "player 1"
 
     @IBAction func playAsModeratorPressed() {
         //self.navigationController?.pushViewController(ModSetupViewController(), animated: true)
