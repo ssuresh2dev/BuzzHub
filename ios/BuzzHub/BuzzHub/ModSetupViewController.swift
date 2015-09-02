@@ -11,7 +11,7 @@ import Socket_IO_Client_Swift
 import AVFoundation
 
 class ModSetupViewController: UIViewController, UITableViewDataSource {
-    let socket = SocketIOClient(socketURL: "http://45.55.138.232:8900")
+    let socket = SocketIOClient(socketURL: "http://45.55.138.232:8901")
     
     var playersArray = [String]()
     var gameKeyString = ""
@@ -74,9 +74,9 @@ class ModSetupViewController: UIViewController, UITableViewDataSource {
         
         let letters : NSString = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNOPQRSTUVWXYZ0123456789"
         
-        var randomString : NSMutableString = NSMutableString(capacity: 8)
+        var randomString : NSMutableString = NSMutableString(capacity: 5)
         
-        for (var i=0; i < 8; i++){
+        for (var i=0; i < 5; i++){
             var length = UInt32 (letters.length)
             var rand = arc4random_uniform(length)
             randomString.appendFormat("%C", letters.characterAtIndex(Int(rand)))

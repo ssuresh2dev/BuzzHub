@@ -11,7 +11,7 @@ import Socket_IO_Client_Swift
 
 class BuzzerViewController: UIViewController {
     
-    let socket = SocketIOClient(socketURL: "http://45.55.138.232:8900")
+    let socket = SocketIOClient(socketURL: "http://45.55.138.232:8901")
     var playerName = ""
     var keyString = ""
     @IBOutlet var nameLabel: UILabel?

@@ -16,7 +16,7 @@ class PlayerSetupViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var submitButton: UIButton?
     @IBOutlet var waitingLabel: UILabel?
     
-    let socket = SocketIOClient(socketURL: "http://45.55.138.232:8900")
+    let socket = SocketIOClient(socketURL: "http://45.55.138.232:8901")
     
     override func viewDidLoad() {
         super.viewDidLoad()
