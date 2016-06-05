@@ -7,11 +7,10 @@
 //
 
 import UIKit
-import Socket_IO_Client_Swift
+import SocketIOClientSwift
 
 class BuzzerViewController: UIViewController {
-    
-    let socket = SocketIOClient(socketURL: "http://45.55.138.232:8901")
+    let socket = SocketIOClient(socketURL: NSURL(string: "http://45.55.138.232:8901")!, options: [.Log(true), .ForcePolling(true)])
     var playerName = ""
     var keyString = ""
     @IBOutlet var nameLabel: UILabel?
@@ -42,7 +41,7 @@ class BuzzerViewController: UIViewController {
 
     func addHandlers(){
         self.socket.on("playerBuzzed"){[weak self]data, ack in
-            if let name = data?[0] as? String, let key = data?[1] as? String
+            if let name = data[0] as? String, let key = data[1] as? String
             {
                 if key == self!.keyString {
                     self!.buzzButton?.enabled = false
@@ -55,7 +54,7 @@ class BuzzerViewController: UIViewController {
 
         }
         self.socket.on("buzzerReset"){[weak self]data, ack in
-            if let key = data?[0] as? String
+            if let key = data[0] as? String
             {
                 if key == self!.keyString {
 
@@ -68,7 +67,7 @@ class BuzzerViewController: UIViewController {
 
         }
         self.socket.on("game over"){[weak self]data, ack in
-            if let key = data?[0] as? String
+            if let key = data[0] as? String
             {
                 if key == self!.keyString {
                     self!.navigationController?.popToRootViewControllerAnimated(true)

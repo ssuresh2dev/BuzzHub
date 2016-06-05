@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 SAMEER SURESH. All rights reserved.
 //
 
-import Socket_IO_Client_Swift
+import SocketIOClientSwift
 import UIKit
 import AVFoundation
 
 class GameTrackerViewController: UIViewController {
     @IBOutlet var buzzLabel: UILabel?
-    let socket = SocketIOClient(socketURL: "http://45.55.138.232:8901")
+    let socket = SocketIOClient(socketURL: NSURL(string: "http://45.55.138.232:8901")!, options: [.Log(true), .ForcePolling(true)])
     var gameKey = ""
     var audioPlayer = AVAudioPlayer()
     
@@ -30,7 +30,7 @@ class GameTrackerViewController: UIViewController {
     
     func addHandlers(){
         self.socket.on("playerBuzzed"){[weak self]data, ack in
-            if let name = data?[0] as? String, let key = data?[1] as? String
+            if let name = data[0] as? String, let key = data[1] as? String
             {
                 if key == self!.gameKey {
                     self!.buzzLabel?.text = name + " Buzzed!"
@@ -44,6 +44,7 @@ class GameTrackerViewController: UIViewController {
     }
     @IBAction func resetBuzzerPressed(){
         self.socket.emit("resetBuzzers", gameKey)
+        self.buzzLabel?.text = "No Current Buzzes"
         
     }
     
@@ -56,13 +57,13 @@ class GameTrackerViewController: UIViewController {
     
     func playSound(){
         var alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("buzz", ofType: "mp3")!)
-        AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil)
-        AVAudioSession.sharedInstance().setActive(true, error: nil)
-        
-        var error: NSError?
-        audioPlayer = AVAudioPlayer(contentsOfURL: alertSound, error: &error)
-        audioPlayer.prepareToPlay()
-        audioPlayer.play()
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setActive(true)
+            audioPlayer = try AVAudioPlayer(contentsOfURL: alertSound)
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
+        } catch{}
         
     }
 

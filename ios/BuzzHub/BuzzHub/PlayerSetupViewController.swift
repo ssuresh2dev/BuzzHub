@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 SAMEER SURESH. All rights reserved.
 //
 
-import Socket_IO_Client_Swift
+import SocketIOClientSwift
 import UIKit
 
 class PlayerSetupViewController: UIViewController, UITextFieldDelegate {
@@ -16,7 +16,7 @@ class PlayerSetupViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var submitButton: UIButton?
     @IBOutlet var waitingLabel: UILabel?
     
-    let socket = SocketIOClient(socketURL: "http://45.55.138.232:8901")
+    let socket = SocketIOClient(socketURL: NSURL(string: "http://45.55.138.232:8901")!, options: [.Log(true), .ForcePolling(true)])
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +37,7 @@ class PlayerSetupViewController: UIViewController, UITextFieldDelegate {
         //self.navigationController?.pushViewController(BuzzerViewController(), animated: true)
         var keyString = self.keyTextField!.text
         var nameString = self.nameTextField!.text
-        self.socket.emit("joinGroup", keyString, nameString)
+        self.socket.emit("joinGroup", keyString!, nameString!)
         self.submitButton?.enabled = false
         self.submitButton?.hidden = true
         self.waitingLabel?.text = "Waiting for Moderator..."
@@ -61,8 +61,8 @@ class PlayerSetupViewController: UIViewController, UITextFieldDelegate {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let buzzerViewController = segue.destinationViewController as! BuzzerViewController
-        buzzerViewController.playerName = self.nameTextField!.text
-        buzzerViewController.keyString = self.keyTextField!.text
+        buzzerViewController.playerName = self.nameTextField!.text!
+        buzzerViewController.keyString = self.keyTextField!.text!
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {

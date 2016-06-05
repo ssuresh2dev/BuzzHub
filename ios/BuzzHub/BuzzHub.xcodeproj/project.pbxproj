@@ -18,7 +18,7 @@
 		3C835E0D1B75D38E008F06C1 /* PlayerSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C835E0C1B75D38E008F06C1 /* PlayerSetupViewController.swift */; };
 		3C835E0F1B75D4A1008F06C1 /* BuzzerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C835E0E1B75D4A1008F06C1 /* BuzzerViewController.swift */; };
 		3C835E111B7655EF008F06C1 /* buzz.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3C835E101B7655EF008F06C1 /* buzz.mp3 */; };
-		F884B75F525151DFFD92F8D8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9861D16DE0B37D3F04CECCE /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		F884B75F525151DFFD92F8D8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9861D16DE0B37D3F04CECCE /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -198,6 +198,7 @@
 		3C835D691B758595008F06C1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "SAMEER SURESH";
 				TargetAttributes = {
@@ -440,7 +441,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BuzzHub/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -456,7 +457,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BuzzHub/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

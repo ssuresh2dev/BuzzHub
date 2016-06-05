@@ -7,11 +7,11 @@
 //
 
 import UIKit
-import Socket_IO_Client_Swift
+import SocketIOClientSwift
 import AVFoundation
 
 class ModSetupViewController: UIViewController, UITableViewDataSource {
-    let socket = SocketIOClient(socketURL: "http://45.55.138.232:8901")
+    let socket = SocketIOClient(socketURL: NSURL(string: "http://45.55.138.232:8901")!, options: [.Log(true), .ForcePolling(true)])
     
     var playersArray = [String]()
     var gameKeyString = ""
@@ -26,8 +26,8 @@ class ModSetupViewController: UIViewController, UITableViewDataSource {
         self.keyText?.text = gameKey as String
         gameKeyString = gameKey as String
         self.socket.connect()
-        
         socket.on("connect") {data, ack in
+            print("test")
             self.socket.emit("keyGenerate", gameKey)
             self.addHandlers()
         }
@@ -37,7 +37,7 @@ class ModSetupViewController: UIViewController, UITableViewDataSource {
     
     func addHandlers(){
         self.socket.on("addNew"){data, ack in
-            if let name = data?[1] as? String, let key = data?[0] as? String
+            if let name = data[1] as? String, let key = data[0] as? String
             {
                 if key == self.gameKeyString {
 
