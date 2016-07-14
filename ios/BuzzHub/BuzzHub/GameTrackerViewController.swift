@@ -56,7 +56,7 @@ class GameTrackerViewController: UIViewController {
     }
     
     func playSound(){
-        var alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("buzz", ofType: "mp3")!)
+        let alertSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("buzzersound", ofType: "mp3")!)
         do {
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
             try AVAudioSession.sharedInstance().setActive(true)

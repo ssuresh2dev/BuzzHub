@@ -33,9 +33,17 @@ class BuzzerViewController: UIViewController {
     
     @IBAction func buzzPressed(){
         self.socket.emit("buzz", playerName, keyString)
-        self.lockoutText?.text = "You have buzzed!"
-        self.view.backgroundColor = UIColor.greenColor()
-        
+        self.socket.on("playerBuzzed"){[weak self]data, ack in
+            if let name = data[0] as? String, let key = data[1] as? String
+            {
+                if key == self!.keyString && self!.playerName == name{
+                    self!.lockoutText?.text = "You have buzzed!"
+                    self!.view.backgroundColor = UIColor.greenColor()
+                }
+                
+            }
+            
+        }
         
     }
 

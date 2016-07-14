@@ -20,6 +20,7 @@ class PlayerSetupViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBarHidden = false
         self.enterGameButton?.enabled = false
         self.enterGameButton?.hidden = true
         self.socket.connect()
@@ -34,9 +35,9 @@ class PlayerSetupViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func goPressed(){
-        //self.navigationController?.pushViewController(BuzzerViewController(), animated: true)
-        var keyString = self.keyTextField!.text
-        var nameString = self.nameTextField!.text
+        let keyString = self.keyTextField!.text
+        let nameString = self.nameTextField!.text
+        
         self.socket.emit("joinGroup", keyString!, nameString!)
         self.submitButton?.enabled = false
         self.submitButton?.hidden = true
@@ -68,6 +69,10 @@ class PlayerSetupViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return false
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
     }
 
     /*

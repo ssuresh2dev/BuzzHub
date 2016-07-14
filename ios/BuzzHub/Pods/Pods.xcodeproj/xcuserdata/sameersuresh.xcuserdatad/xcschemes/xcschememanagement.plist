@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Onboard.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0488EF451A2B5575F6B5166B2BE4BB89</key>
+		<key>28B7E268C37F583B3B3FDE7880AB890D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A787C50BB638F76ED0EE6AED918E9110</key>
+		<key>66BDD4778705D204F828E9082BF90075</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D7FF48F3092783E4E42B336F0DEF2D1A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

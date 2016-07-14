@@ -22,12 +22,12 @@ class ModSetupViewController: UIViewController, UITableViewDataSource {
     @IBOutlet var namesTable: UITableView?
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBarHidden = false
         let gameKey = randomStringWithLength()
         self.keyText?.text = gameKey as String
         gameKeyString = gameKey as String
         self.socket.connect()
         socket.on("connect") {data, ack in
-            print("test")
             self.socket.emit("keyGenerate", gameKey)
             self.addHandlers()
         }
@@ -41,7 +41,7 @@ class ModSetupViewController: UIViewController, UITableViewDataSource {
             {
                 if key == self.gameKeyString {
 
-                    var newPlayerName = name
+                    let newPlayerName = name
                     self.playersArray.append(newPlayerName)
                     self.namesTable?.reloadData()
                 }
@@ -74,14 +74,13 @@ class ModSetupViewController: UIViewController, UITableViewDataSource {
         
         let letters : NSString = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNOPQRSTUVWXYZ0123456789"
         
-        var randomString : NSMutableString = NSMutableString(capacity: 5)
+        let randomString : NSMutableString = NSMutableString(capacity: 5)
         
-        for (var i=0; i < 5; i++){
-            var length = UInt32 (letters.length)
-            var rand = arc4random_uniform(length)
+        for _ in 0...4 {
+            let length = UInt32 (letters.length)
+            let rand = arc4random_uniform(length)
             randomString.appendFormat("%C", letters.characterAtIndex(Int(rand)))
         }
-        
         return randomString
     }
     

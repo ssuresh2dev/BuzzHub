@@ -1,10 +1,13 @@
 PODS:
+  - Onboard (2.2.1)
   - Socket.IO-Client-Swift (5.5.0)
 
 DEPENDENCIES:
+  - Onboard
   - Socket.IO-Client-Swift (~> 5.5.0)
 
 SPEC CHECKSUMS:
+  Onboard: 75731d0b265f5b5bab0b4bceff1778d7f6e839af
   Socket.IO-Client-Swift: f39dbd4e9b295907bb7fd4b9588b89c00426783d
 
 COCOAPODS: 0.39.0

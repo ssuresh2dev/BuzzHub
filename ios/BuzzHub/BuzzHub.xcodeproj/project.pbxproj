@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C029F121D37640400129245 /* buzzersound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3C029F111D37640400129245 /* buzzersound.mp3 */; };
 		3C835D771B758595008F06C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C835D761B758595008F06C1 /* AppDelegate.swift */; };
 		3C835D791B758595008F06C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C835D781B758595008F06C1 /* ViewController.swift */; };
 		3C835D7C1B758595008F06C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C835D7A1B758595008F06C1 /* Main.storyboard */; };
@@ -18,6 +19,10 @@
 		3C835E0D1B75D38E008F06C1 /* PlayerSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C835E0C1B75D38E008F06C1 /* PlayerSetupViewController.swift */; };
 		3C835E0F1B75D4A1008F06C1 /* BuzzerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C835E0E1B75D4A1008F06C1 /* BuzzerViewController.swift */; };
 		3C835E111B7655EF008F06C1 /* buzz.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3C835E101B7655EF008F06C1 /* buzz.mp3 */; };
+		3C9E84771D0536E400269113 /* mihNfgY.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C9E84761D0536E400269113 /* mihNfgY.jpg */; };
+		3C9E84791D0537D700269113 /* Untitled-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C9E84781D0537D600269113 /* Untitled-1.jpg */; };
+		3C9E847B1D05387300269113 /* blue.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C9E847A1D05387300269113 /* blue.jpg */; };
+		3C9E847D1D0647F900269113 /* discussion-1630954.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C9E847C1D0647F900269113 /* discussion-1630954.jpg */; };
 		F884B75F525151DFFD92F8D8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9861D16DE0B37D3F04CECCE /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		353019BBB147FF5A322E1BCD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		3C029F111D37640400129245 /* buzzersound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = buzzersound.mp3; sourceTree = "<group>"; };
 		3C835D711B758595008F06C1 /* BuzzHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuzzHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C835D751B758595008F06C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C835D761B758595008F06C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +54,10 @@
 		3C835E0C1B75D38E008F06C1 /* PlayerSetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerSetupViewController.swift; sourceTree = "<group>"; };
 		3C835E0E1B75D4A1008F06C1 /* BuzzerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuzzerViewController.swift; sourceTree = "<group>"; };
 		3C835E101B7655EF008F06C1 /* buzz.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = buzz.mp3; sourceTree = "<group>"; };
+		3C9E84761D0536E400269113 /* mihNfgY.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mihNfgY.jpg; sourceTree = "<group>"; };
+		3C9E84781D0537D600269113 /* Untitled-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Untitled-1.jpg"; sourceTree = "<group>"; };
+		3C9E847A1D05387300269113 /* blue.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blue.jpg; sourceTree = "<group>"; };
+		3C9E847C1D0647F900269113 /* discussion-1630954.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "discussion-1630954.jpg"; sourceTree = "<group>"; };
 		8943AE318D00E80E8B69327A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B9861D16DE0B37D3F04CECCE /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -107,6 +117,10 @@
 				3C835D781B758595008F06C1 /* ViewController.swift */,
 				3C835D7A1B758595008F06C1 /* Main.storyboard */,
 				3C835D7D1B758595008F06C1 /* Images.xcassets */,
+				3C9E847C1D0647F900269113 /* discussion-1630954.jpg */,
+				3C9E847A1D05387300269113 /* blue.jpg */,
+				3C9E84781D0537D600269113 /* Untitled-1.jpg */,
+				3C9E84761D0536E400269113 /* mihNfgY.jpg */,
 				3C835D7F1B758595008F06C1 /* LaunchScreen.xib */,
 				3C835D741B758595008F06C1 /* Supporting Files */,
 				3C835E081B75CD33008F06C1 /* ModSetupViewController.swift */,
@@ -120,6 +134,7 @@
 		3C835D741B758595008F06C1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3C029F111D37640400129245 /* buzzersound.mp3 */,
 				3C835E101B7655EF008F06C1 /* buzz.mp3 */,
 				3C835D751B758595008F06C1 /* Info.plist */,
 			);
@@ -236,9 +251,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C9E84771D0536E400269113 /* mihNfgY.jpg in Resources */,
 				3C835D7C1B758595008F06C1 /* Main.storyboard in Resources */,
+				3C9E847D1D0647F900269113 /* discussion-1630954.jpg in Resources */,
+				3C029F121D37640400129245 /* buzzersound.mp3 in Resources */,
+				3C9E84791D0537D700269113 /* Untitled-1.jpg in Resources */,
 				3C835E111B7655EF008F06C1 /* buzz.mp3 in Resources */,
 				3C835D811B758595008F06C1 /* LaunchScreen.xib in Resources */,
+				3C9E847B1D05387300269113 /* blue.jpg in Resources */,
 				3C835D7E1B758595008F06C1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
